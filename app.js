@@ -5,7 +5,11 @@ var express = require('express'),
     nicknames = {};
 
 //server.listen(8000);
-server.listen(process.env.PORT, process.env.IP);
+console.log(process.env.PORT);
+const port = process.env.PORT || 3000;
+const ip = process.env.IP || '127.0.0.1';
+
+server.listen(port, ip);
 app.get('/', function(req, res) {
     res.sendfile(__dirname + '/index.html');
 });

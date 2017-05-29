@@ -4,9 +4,13 @@
   "description": "Chat example for learning purposes",
   "main": "app.js",
   "repository": "",
+  "scripts":{
+    "start": "node app.js"
+  },
   "author": "Mario Pérez Esteso <mario@geekytheory.com>",
   "dependencies": {
     "express": "~3.2.4",
     "socket.io": "~0.9.14"
   }
+
 }
