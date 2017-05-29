@@ -16,7 +16,7 @@ const ip = process.env.IP || '127.0.0.1';
 
 server.listen(port, ip);
 
-//mandamos un archivo en la respuesta
+//mandamos un archivo en la respuesta, seteo de ruta
 app.get('/', function(req, res) {
     res.sendfile(__dirname + '/index.html');
 });
@@ -24,8 +24,11 @@ app.get('/', function(req, res) {
 
 
 io.sockets.on('connection', function(socket) {
+
+    //mensaje que manda el cliente
     socket.on('send message', function(data) {
-        io.sockets.emit('new message', {msg: data, nick: socket.nickname});
+    //mensaje + user por json 
+    io.sockets.emit('new message', {msg: data, nick: socket.nickname});
     });
     
     socket.on('new user', function(data, callback) {
