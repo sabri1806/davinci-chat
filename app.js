@@ -48,7 +48,7 @@ io.sockets.on('connection', function(socket) {
         delete nicknames[socket.nickname];
         updateNickNames();
     });
-    
+    //actualiza users
     function updateNickNames() {
         io.sockets.emit('usernames', nicknames);
     }
