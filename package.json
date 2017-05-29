@@ -7,7 +7,7 @@
   "scripts":{
     "start": "node app.js"
   },
-  "author": "sabrina lucero <sabrinita185@gmail.com>",
+  "author": "victor godoy sabrina lucero <sabrinita185@gmail.com>",
   "dependencies": {
     "express": "~3.2.4",
     "socket.io": "~0.9.14"
